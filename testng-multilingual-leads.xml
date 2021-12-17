@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="Leads" parallel="tests">
+  <test name="EnglishTest">
+  <parameter name="language" value="english"></parameter>
+    <classes>
+      <class name="testcases.CreateLead"/>
+      <class name="testcases.DeleteLead"/>
+      <class name="testcases.MergeLead"/>
+      <class name="testcases.DuplicateLead"/>
+      <class name="testcases.EditLead"/> 
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="FrenchTest">
+  <parameter name="language" value="french"></parameter>
+    <classes>
+      <class name="testcases.DuplicateLead"/>
+      <class name="testcases.EditLead"/>
+      <class name="testcases.CreateLead"/>
+    </classes>
+  </test> <!-- Test --> 
+</suite> <!-- Leads -->
